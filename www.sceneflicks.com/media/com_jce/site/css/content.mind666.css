@@ -30,7 +30,7 @@ body {
 }
 
 .navbar, .footer {
-    background: linear-gradient(90deg, #8B0000, #FFD700); /* Futuristic navbar & footer */
+    background: linear-gradient(90deg, #8B0000, #ff8800); /* Futuristic navbar & footer */
 }
 
 button, .btn {
@@ -66,7 +66,7 @@ a {
 }
 
 a:hover {
-    color: #FFD700; /* Gold hover effect for elegance */
+    color: #ff8800; /* Gold hover effect for elegance */
 }
 
 button, .btn {
@@ -78,7 +78,7 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-    background-color: #FFD700; /* Gold hover effect */
+    background-color: #ff8800; /* Gold hover effect */
     color: #000000 !important;
     transform: scale(1.05);
 }
