@@ -1,5 +1,3 @@
-
-<!doctype html>
 <html lang="en-gb" dir="ltr">
     
 <!-- Added by  --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by  -->
@@ -74,6 +72,8 @@ window.EventGalleryGooglePhotosConfiguration={"albumUrl":"\/index.php\/en\/scene
 template="shaper_wayne_corp";
 	</script>
     </head>
+
+    
     <body class="site helix-ultimate hu com_eventgallery com-eventgallery view-event layout-simple task-none itemid-321 en-gb ltr sticky-header layout-fluid offcanvas-init offcanvs-position-left">
             <div class="sp-preloader"><div></div></div>
     
@@ -405,12 +405,57 @@ template="shaper_wayne_corp";
 
   
   <!-- 💬 Testimonials -->
-  <h3 class="section-title">💬 What Travelers Say</h3>
-  <div class="testimonials">
-    <div class="testimonial">“Unforgettable experience in Samburu! Thanks guys!” — Achieng</div>
-    <div class="testimonial">“Smooth and stress-free. Loved the Naivasha package!” — Brian</div>
-    <div class="testimonial">“Booked Eldoret trip, everything was on point!” — Wanjiku</div>
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <h3 class="section-title">💬 What Travelers Say</h3>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="assets/images/users/achieng.jpg" alt="Achieng">
+          <div>
+            <h4>Achieng</h4>
+            <p>Samburu Explorer</p>
+          </div>
+        </div>
+        <p class="testimonial-quote">“Unforgettable experience in Samburu! Thanks guys!”</p>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="assets/images/users/brian.jpg" alt="Brian">
+          <div>
+            <h4>Brian</h4>
+            <p>Naivasha Trip</p>
+          </div>
+        </div>
+        <p class="testimonial-quote">“Smooth and stress-free. Loved the Naivasha package!”</p>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="assets/images/users/wanjiku.jpg" alt="Wanjiku">
+          <div>
+            <h4>Wanjiku</h4>
+            <p>Eldoret Adventure</p>
+          </div>
+        </div>
+        <p class="testimonial-quote">“Booked Eldoret trip, everything was on point!”</p>
+        <div class="stars">★★★★☆</div>
+      </div>
+    </div>
+
+    <div class="testimonial-btn-container">
+      <a href="reviews.html" class="testimonial-btn">View More Testimonials</a>
+    </div>
   </div>
+</section>
+
 
   <!-- 📨 Newsletter -->
   <div class="newsletter-box">
@@ -440,7 +485,7 @@ template="shaper_wayne_corp";
   <div class="cta-box">
     <h3>📞 Ready to Start Your Journey?</h3>
     <p>Let us help you create unforgettable memories. Whether it's a solo escape, romantic retreat, or family vacation — we've got you.</p>
-    <a href="contact-us.html" class="book-now-btn" style="margin-top: 15px;">Contact Us</a>
+    <a href="contact-us.html" class="contactnow-btn" style="margin-top: 15px;">Contact Us</a>
   </div>
 </div>
 
@@ -581,18 +626,107 @@ template="shaper_wayne_corp";
     color: #ffffff;
   }
 
-  .testimonials {
-    display: grid;
-    gap: 15px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
+  .testimonials-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 320px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.testimonial-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.testimonial-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.testimonial-header p {
+  margin: 2px 0 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+  min-height: 60px;
+}
+
+.stars {
+  margin-top: 15px;
+  color: #ffcc00;
+  font-size: 1.2rem;
+}
+
+.testimonial-btn-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.testimonial-btn {
+  background-color: #ff8800;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-btn:hover {
+  background-color: #e66e00;
+}
+  .testimonial-btn:active {
+    background-color: #cc5c00;
   }
 
-  .testimonial {
-    font-style: italic;
-    color: #444;
-  }
 
   .newsletter-box {
     margin: 40px 0;
@@ -654,6 +788,24 @@ template="shaper_wayne_corp";
     max-width: 600px;
     margin: 0 auto;
   }
+
+  .contactnow-btn {
+        display: inline-block;
+        margin-bottom: 40px; /* Increased spacing between button and title */
+        padding: 12px 30px;
+        background-color: #ff8800;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 12px;
+        transition: background-color 0.9s ease;
+        
+      }
+  
+      .contactnow-btn:hover {
+        background-color: #ff3300;
+      }
 
   .whatsapp-float {
     position: fixed;
