@@ -724,7 +724,7 @@ input[type="text"]:not(.form-control), input[type="email"]:not(.form-control), i
   font-size: 1rem;
   line-height: 1.25;
   color: #ff8800;
-  background-color: #ff8800;
+  background-color: #ffffff;
   background-image: none;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, .15);
@@ -733,7 +733,7 @@ input[type="text"]:not(.form-control), input[type="email"]:not(.form-control), i
 }
 input[type="text"]:not(.form-control):focus, input[type="email"]:not(.form-control):focus, input[type="url"]:not(.form-control):focus, input[type="date"]:not(.form-control):focus, input[type="password"]:not(.form-control):focus, input[type="search"]:not(.form-control):focus, input[type="tel"]:not(.form-control):focus, input[type="number"]:not(.form-control):focus, select:not(.form-control):focus {
   color: #ff8800;
-  background-color: #ff8800;
+  background-color: #fcfcfc;
   border-color: #ff8800;
   outline: 0;
 }
@@ -748,7 +748,7 @@ input[type="text"]:not(.form-control):focus, input[type="email"]:not(.form-contr
   line-height: 1.25;
   height: calc(2.25rem + 2px);
   color: #ff8800;
-  background-color: #ff8800;
+  background-color: #ffffff;
   background-image: none;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, .15);
@@ -788,7 +788,7 @@ input[type="text"]:not(.form-control):focus, input[type="email"]:not(.form-contr
   line-height: 1.25;
   height: calc(2rem + 2px);
   color: #ff8800;
-  background-color: #ff8800;
+  background-color: #ffffff;
   background-image: none;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, .15);
@@ -2049,7 +2049,6 @@ input[type="text"]:not(.form-control):focus, input[type="email"]:not(.form-contr
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #ff8800;
   opacity: 0.8;
   z-index: -1;
 }
