@@ -177,20 +177,23 @@ template="shaper_wayne_corp";
         color: white;
         text-decoration: none;
         font-weight: bold;
-        font-size: 16px;
-        border-radius: 8px;
-        transition: background-color 0.3s ease;
+        font-size: 40px;
+        border-radius: 12px;
+        transition: background-color 0.9s ease;
+        
       }
   
       .book-now-btn:hover {
-        background-color: #e67300;
+        background-color: #ff3300;
       }
+
+      
   
       .trip-planner-title {
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 10px;
-        color: #333;
+        color: #000000;
       }
   
       .trip-planner-description {
@@ -246,7 +249,7 @@ template="shaper_wayne_corp";
         bottom: 10px;
         left: 10px;
         color: white;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.76);
         padding: 5px;
         font-size: 14px;
         border-radius: 5px;
@@ -268,7 +271,7 @@ template="shaper_wayne_corp";
       }
   
       .scroll-btn-left {
-        left: 0;
+        left: auto;
         right: auto;
       }
   
@@ -355,21 +358,19 @@ template="shaper_wayne_corp";
   
 
 
-<!-- CONTINUING FROM YOUR TRIP GALLERY SECTION -->
 </div> <!-- trip-gallery-wrapper ends -->
 </div> <!-- container ends -->
 
 <!-- 🔍 Search & Filter Bar -->
 <div class="container extra-section">
-  <div class="search-filter">
-    <input type="text" placeholder="Search destination...">
+  <div class="search-filter">    
     <select>
       <option value="">All Types</option>
       <option value="beach">Beach</option>
       <option value="safari">Safari</option>
       <option value="city">City</option>
     </select>
-    <button>🔍 Search</button>
+    <a href="bookinghotels.html" class="searchnow-btn">🔍 Search</a>
   </div>
 
   <!-- 🔥 Hot Deals -->
@@ -389,6 +390,7 @@ template="shaper_wayne_corp";
       <div class="deal-info">
         <p class="deal-title">Weekend at Naivasha</p>
         <p class="deal-price">KES 9,500</p>
+        <p class="deal-countdown">⏳ Deal ends in: <span id="timer"></span></p>
       </div>
     </div>
     <div class="deal-card">
@@ -396,14 +398,12 @@ template="shaper_wayne_corp";
       <div class="deal-info">
         <p class="deal-title">Coastal Vibes in Mombasa</p>
         <p class="deal-price">KES 18,000</p>
+        <p class="deal-countdown">⏳ Deal ends in: <span id="timer"></span></p>
       </div>
     </div>
   </div>
 
-  <!-- 🗺️ Explore on Map -->
-  <h3 class="section-title">🗺️ Explore on Map</h3>
-  <div id="map" style="height: 300px; border-radius: 10px; margin-bottom: 30px;"></div>
-
+  
   <!-- 💬 Testimonials -->
   <h3 class="section-title">💬 What Travelers Say</h3>
   <div class="testimonials">
@@ -443,6 +443,10 @@ template="shaper_wayne_corp";
     <a href="contact-us.html" class="book-now-btn" style="margin-top: 15px;">Contact Us</a>
   </div>
 </div>
+
+<!-- 🗺️ Explore on Map -->
+<h3 class="section-title">🗺️ Explore on Map</h3>
+<div id="map" style="height: 300px; border-radius: 10px; margin-bottom: 30px;"></div>
 
 <!-- WhatsApp Chat Button -->
 <a href="https://wa.me/254703212820" class="whatsapp-float" target="_blank">
@@ -488,7 +492,7 @@ template="shaper_wayne_corp";
 
   .section-sub {
     font-size: 14px;
-    color: #777;
+    color: #ff0000;
     margin-bottom: 20px;
   }
 
@@ -499,7 +503,7 @@ template="shaper_wayne_corp";
   }
 
   .search-filter input, .search-filter select {
-    padding: 10px;
+    padding: 2px;
     border: 1px solid #ccc;
     border-radius: 8px;
     flex: 1;
@@ -509,11 +513,29 @@ template="shaper_wayne_corp";
     padding: 10px 20px;
     background-color: #ff8800;
     border: none;
-    color: #ff8800;
+    color: #000000;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
   }
+
+  .searchnow-btn {
+        display: inline-block;
+        margin-bottom: 40px; /* Increased spacing between button and title */
+        padding: 12px 30px;
+        background-color: #ff8800;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 12px;
+        transition: background-color 0.9s ease;
+        
+      }
+
+  .searchnow-btn:hover {
+        background-color: #ff3300;
+      }
 
   .deals-grid {
     display: flex;
