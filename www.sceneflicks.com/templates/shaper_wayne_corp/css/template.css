@@ -1979,7 +1979,7 @@ input[type="text"]:not(.form-control):focus, input[type="email"]:not(.form-contr
 #sp-header.header-sticky {
   position: fixed;
   z-index: 9999;
-  background-color: rgba(18, 19, 48, .95);
+  background-color: rgba(15, 7, 1, 0.95);
 }
 .sp-megamenu-parent > li > a, .sp-megamenu-parent > li > span {
   font-size: 14px;
