@@ -43,7 +43,7 @@ h4{font-family: 'Work Sans', sans-serif;font-size: 16px;font-weight: 600;}
 
 .logo-image 
 {
-    height:none;
+    height:50px;
 }
 #sp-footer{ background-color:#000000; }
 	</style>
@@ -159,7 +159,7 @@ template="shaper_wayne_corp";
 
 
                         
-                          <!-- Main Body -->
+                          <!-- MAIN BODY -->
 
                         
 <section id="sp-main-body"> 
@@ -187,13 +187,36 @@ template="shaper_wayne_corp";
   font-weight: bold;
   font-size: 40px;
   border-radius: 12px;
+  animation: slideInZoom 3s ease-out forwards, zoomEffect 2s ease-in-out infinite;
+  opacity: 0;
+  transform: translateX(-200px) scale(1); /* Initial position */
   transition: background-color 0.9s ease;
 }
 
-  
-      .book-now-btn:hover {
-        background-color: #ff3300;
-      }
+.book-now-btn:hover {
+  background-color: #ff3300;
+}
+
+@keyframes slideInZoom {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes zoomEffect {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
 
       .container1 {
         max-width: 1200px;
@@ -310,239 +333,7 @@ template="shaper_wayne_corp";
           display: none;
         }
       }
-    </style>
-
-  <section>
-    <div class="container">
-      <a href="bookinghotels.html" class="book-now-btn">Book Now</a>
-
-      </section>
-
-      <section>
-    <div class="container1">
-      <p class="trip-planner-title">A Trip Planner</p>
-      <p class="trip-planner-description">Our trip planner lets you explore and plan your perfect getaway with ease. Choose from a variety of destinations across Kenya, each offering unique experiences. Whether you're looking for adventure or relaxation, we’ve got you covered.</p>
-  
-      <div class="trip-gallery-wrapper">
-        <div class="trip-gallery" id="tripGallery">
-          <!-- Images with names -->
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/nairobi.jpg" alt="Nairobi"><div class="trip-name">Nairobi</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/kisumu.jpg" alt="Kisumu"><div class="trip-name">Kisumu</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/mombasa.jpg" alt="Mombasa"><div class="trip-name">Mombasa</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/nakuru.jpg" alt="Nakuru"><div class="trip-name">Nakuru</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/kisii.jpg" alt="Kisii"><div class="trip-name">Kisii</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/eldoret.jpg" alt="Eldoret"><div class="trip-name">Eldoret</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/maasai-mara.jpg" alt="Maasai Mara"><div class="trip-name">Maasai Mara</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/lamu.jpg" alt="Lamu"><div class="trip-name">Lamu</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/kajiado.jpg" alt="Kajiado"><div class="trip-name">Kajiado</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/malindi.jpg" alt="Malindi"><div class="trip-name">Malindi</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/migori.jpg" alt="Migori"><div class="trip-name">Migori</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/naivasha.jpg" alt="Naivasha"><div class="trip-name">Naivasha</div></a>
-          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/samburu.jpg" alt="Samburu"><div class="trip-name">Samburu</div></a>
-        </div>
-        <button class="scroll-btn scroll-btn-left" onclick="scrollLeft()">←</button>
-        <button class="scroll-btn" onclick="scrollRight()">→</button>
-      </div>
-    </div>
-  
-    <script>
-      let tripGallery = document.getElementById('tripGallery');
-      
-      function scrollRight() {
-        const maxScrollLeft = tripGallery.scrollWidth - tripGallery.clientWidth;
-        const currentScrollLeft = tripGallery.scrollLeft;
-        
-        if (currentScrollLeft < maxScrollLeft) {
-          tripGallery.scrollBy({ 
-            left: 800, 
-            behavior: 'smooth' 
-          });
-        }
-      }
-  
-      function scrollLeft() {
-        const currentScrollLeft = tripGallery.scrollLeft;
-        
-        if (currentScrollLeft > 0) {
-          tripGallery.scrollBy({ 
-            left: -800, 
-            behavior: 'smooth' 
-          });
-        }
-      }
-    </script>
-  </section>
-  
-  
-
-
-</div> <!-- trip-gallery-wrapper ends -->
-</div> <!-- container ends -->
-
-<!-- 🔍 Search & Filter Bar -->
-<div class="container extra-section">
-  <div class="search-filter">    
-    <select>
-      <option value="">All Types</option>
-      <option value="beach">Beach</option>
-      <option value="safari">Safari</option>
-      <option value="city">City</option>
-    </select>
-    <a href="bookinghotels.html" class="searchnow-btn">🔍 Search</a>
-  </div>
-
-  <!-- 🔥 Hot Deals -->
-  <h3 class="section-title">🔥 Hot Deals This Week</h3>
-  <p class="section-sub">Limited time offers on top destinations</p>
-  <div class="deals-grid">
-    <div class="deal-card">
-      <img src="../../images/places/maasai-mara.jpg" alt="Maasai Mara">
-      <div class="deal-info">
-        <p class="deal-title">3 Days in Maasai Mara</p>
-        <p class="deal-price">KES 25,000</p>
-        <p class="deal-countdown">⏳ Deal ends in: <span id="timer"></span></p>
-      </div>
-    </div>
-    <div class="deal-card">
-      <img src="../../images/places/naivasha.jpg" alt="Naivasha">
-      <div class="deal-info">
-        <p class="deal-title">Weekend at Naivasha</p>
-        <p class="deal-price">KES 9,500</p>
-        <p class="deal-countdown">⏳ Deal ends in: <span id="timer"></span></p>
-      </div>
-    </div>
-    <div class="deal-card">
-      <img src="../../images/places/mombasa.jpg" alt="Mombasa">
-      <div class="deal-info">
-        <p class="deal-title">Coastal Vibes in Mombasa</p>
-        <p class="deal-price">KES 18,000</p>
-        <p class="deal-countdown">⏳ Deal ends in: <span id="timer"></span></p>
-      </div>
-    </div>
-  </div>
-
-  
-  <!-- 💬 Testimonials -->
-<section id="testimonials" class="testimonials-section">
-  <div class="container">
-    <h3 class="section-title">💬 What Travelers Say</h3>
-
-    <div class="testimonials-grid">
-      <!-- Testimonial 1 -->
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="../../images/users/achieng.jpg" alt="Achieng">
-          <div>
-            <h4>Achieng</h4>
-            <p>Samburu Explorer</p>
-          </div>
-        </div>
-        <p class="testimonial-quote">“Unforgettable experience in Samburu! Thanks guys!”</p>
-        <div class="stars">★★★★★</div>
-      </div>
-
-      <!-- Testimonial 2 -->
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="../../images/users/brian.jpg" alt="Brian">
-          <div>
-            <h4>Brian</h4>
-            <p>Naivasha Trip</p>
-          </div>
-        </div>
-        <p class="testimonial-quote">“Smooth and stress-free. Loved the Naivasha package!”</p>
-        <div class="stars">★★★★★</div>
-      </div>
-
-      <!-- Testimonial 3 -->
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="../../images/users/wanjiku.jpg" alt="Wanjiku">
-          <div>
-            <h4>Wanjiku</h4>
-            <p>Eldoret Adventure</p>
-          </div>
-        </div>
-        <p class="testimonial-quote">“Booked Eldoret trip, everything was on point!”</p>
-        <div class="stars">★★★★☆</div>
-      </div>
-    </div>
-
-    <div class="testimonial-btn-container">
-      <a href="reviews.html" class="testimonial-btn">View More Testimonials</a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- 📨 Newsletter -->
-  <div class="newsletter-box">
-    <p>📬 Get exclusive deals straight to your inbox</p>
-    <input type="email" placeholder="Enter your email">
-    <button>Subscribe</button>
-  </div>
-
-  <!-- ❓ FAQ Section -->
-  <h3 class="section-title">❓ Frequently Asked Questions</h3>
-  <div class="faq">
-    <details>
-      <summary>Is transport included in the packages?</summary>
-      <p>Yes, most of our packages include transport. Please check individual listings for details.</p>
-    </details>
-    <details>
-      <summary>Can I cancel or reschedule?</summary>
-      <p>You can cancel up to 48 hours before the trip. Terms apply based on package.</p>
-    </details>
-    <details>
-      <summary>Do you offer group discounts?</summary>
-      <p>Yes! We offer discounts for groups of 4 or more. Contact us for a custom quote.</p>
-    </details>
-  </div>
-
-  <!-- 📞 Call to Action -->
-  <div class="cta-box">
-    <h3>📞 Ready to Start Your Journey?</h3>
-    <p>Let us help you create unforgettable memories. Whether it's a solo escape, romantic retreat, or family vacation — we've got you.</p>
-    <a href="contact-us.html" class="contactnow-btn" style="margin-top: 15px;">Contact Us</a>
-  </div>
-</div>
-
-<!-- 🗺️ Explore on Map -->
-<h3 class="section-title">🗺️ Explore on Map</h3>
-<div id="map" style="height: 300px; border-radius: 10px; margin-bottom: 30px;"></div>
-
-<!-- WhatsApp Chat Button -->
-<a href="https://wa.me/254703212820" class="whatsapp-float" target="_blank">
-  <img src="../../images/whatsapp-icon.png" alt="Chat with us" />
-</a>
-
-<!-- SCRIPTS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-<script>
-  const map = L.map('map').setView([-1.2921, 36.8219], 6);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; OpenStreetMap contributors',
-  }).addTo(map);
-  L.marker([-1.2921, 36.8219]).addTo(map).bindPopup('Nairobi').openPopup();
-
-  // Countdown Timer
-  const endTime = new Date().getTime() + (3 * 24 * 60 * 60 * 1000); // 3 days
-  const timer = document.getElementById("timer");
-  setInterval(() => {
-    const now = new Date().getTime();
-    const distance = endTime - now;
-    const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((distance % (1000 * 60)) / 1000);
-    timer.innerHTML = `${d}d ${h}h ${m}m ${s}s`;
-  }, 1000);
-</script>
-
-<!-- STYLES -->
-<style>
-  .extra-section {
+      .extra-section {
     padding-top: 50px;
   }
 
@@ -600,49 +391,7 @@ template="shaper_wayne_corp";
         background-color: #ff3300;
       }
 
-  .deals-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .deal-card {
-    width: 30%;
-    background: #ff8800;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-  }
-
-  .deal-card:hover {
-    transform: scale(1.03);
-  }
-
-  .deal-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-
-  .deal-info {
-    padding: 10px;
-  }
-
-  .deal-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .deal-price {
-    color: #ffffff;
-    font-weight: bold;
-  }
-
-  .deal-countdown {
-    font-size: 13px;
-    color: #ffffff;
-  }
+  
 
   .testimonials-section {
   padding: 60px 20px;
@@ -807,127 +556,649 @@ template="shaper_wayne_corp";
     margin: 0 auto;
   }
 
-  .contactnow-btn {
-        display: inline-block;
-        margin-bottom: 40px; /* Increased spacing between button and title */
-        padding: 12px 30px;
-        background-color: #ff8800;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 20px;
-        border-radius: 12px;
-        transition: background-color 0.9s ease;
+  
+/* Deals Section Grid */
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding-bottom: 40px; /* Space below the grid */
+}
+
+/* Deal Card */
+.deal-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative; /* Required for layering */
+}
+
+/* Media Wrapper (for image and video) */
+.media-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.media-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Video Styling */
+.media-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Below the deal-info */
+  display: none;
+  border-radius: inherit;
+}
+
+/* Show video on hover (desktop) */
+.deal-card:hover .media-wrapper video {
+  display: block;
+}
+
+/* Deal Info */
+.deal-info {
+  padding: 16px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2; /* Ensures it's above the video */
+}
+
+.deal-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.deal-price {
+  color: #ff8800;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.deal-countdown {
+  font-size: 14px;
+  color: #555;
+}
+
+.deal-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Countdown urgency styles (optional, if used in script) */
+.timer-red {
+  color: red;
+}
+
+.timer-orange {
+  color: orange;
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+
+.media-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.media-wrapper img,
+.media-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  display: block;
+  border-radius: 12px;
+}
+
+.media-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.media-wrapper:hover video {
+  opacity: 1;
+}
+
+.media-wrapper:hover img {
+  opacity: 0;
+}
+
+.media-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .media-wrapper img,
+  .media-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: opacity 0.3s ease;
+    display: block;
+  }
+
+  .media-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .media-wrapper:hover video {
+    opacity: 1;
+  }
+
+  .media-wrapper:hover img {
+    opacity: 0;
+  }
+
+
+  
+    </style>
+
+  <section>
+    <div class="container">
+      <a href="bookinghotels.html" class="book-now-btn">Book Now</a>
+
+      </section>
+
+      <section>
+    <div class="container1">
+      <p class="trip-planner-title">A Trip Planner</p>
+      <p class="trip-planner-description">Our trip planner lets you explore and plan your perfect getaway with ease. Choose from a variety of destinations across Kenya, each offering unique experiences. Whether you're looking for adventure or relaxation, we’ve got you covered.</p>
+  
+      <div class="trip-gallery-wrapper">
+        <div class="trip-gallery" id="tripGallery">
+          <!-- Images with names -->
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/nairobi.jpg" alt="Nairobi"><div class="trip-name">Nairobi</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/kisumu.jpg" alt="Kisumu"><div class="trip-name">Kisumu</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/mombasa.jpg" alt="Mombasa"><div class="trip-name">Mombasa</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/nakuru.jpg" alt="Nakuru"><div class="trip-name">Nakuru</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/kisii.jpg" alt="Kisii"><div class="trip-name">Kisii</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/eldoret.jpg" alt="Eldoret"><div class="trip-name">Eldoret</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/maasai-mara.jpg" alt="Maasai Mara"><div class="trip-name">Maasai Mara</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/lamu.jpg" alt="Lamu"><div class="trip-name">Lamu</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/kajiado.jpg" alt="Kajiado"><div class="trip-name">Kajiado</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/malindi.jpg" alt="Malindi"><div class="trip-name">Malindi</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/migori.jpg" alt="Migori"><div class="trip-name">Migori</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/naivasha.jpg" alt="Naivasha"><div class="trip-name">Naivasha</div></a>
+          <a href="tripplanner.html" class="trip-card"><img src="../../images/places/samburu.jpg" alt="Samburu"><div class="trip-name">Samburu</div></a>
+        </div>
+        <button class="scroll-btn scroll-btn-left" onclick="scrollLeft()">←</button>
+        <button class="scroll-btn" onclick="scrollRight()">→</button>
+      </div>
+    </div>
+  
+    <script>
+      let tripGallery = document.getElementById('tripGallery');
+      
+      function scrollRight() {
+        const maxScrollLeft = tripGallery.scrollWidth - tripGallery.clientWidth;
+        const currentScrollLeft = tripGallery.scrollLeft;
         
+        if (currentScrollLeft < maxScrollLeft) {
+          tripGallery.scrollBy({ 
+            left: 800, 
+            behavior: 'smooth' 
+          });
+        }
       }
   
-      .contactnow-btn:hover {
-        background-color: #ff3300;
+      function scrollLeft() {
+        const currentScrollLeft = tripGallery.scrollLeft;
+        
+        if (currentScrollLeft > 0) {
+          tripGallery.scrollBy({ 
+            left: -800, 
+            behavior: 'smooth' 
+          });
+        }
       }
-
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-  }
-
-  .whatsapp-float img {
-    width: 50px;
-    height: 50px;
-  }
-</style>
-
-<footer id="sp-footer" >
-
-    <div class="container">
-<div class="container-inner">
+    </script>
+  </section>
+  
+  
 
 
-<div class="row">
-<div id="sp-footer1" class="col-lg-8 "><div class="sp-column "><span class="sp-copyright">© 2025 Scene Flicks Agency |  +254 703 212 820 | sceneflicks@gmail.com</span></div></div><div id="sp-footer2" class="col-lg-4 "><div class="sp-column "><ul class="social-icons"><li class="social-icon-facebook"><a target="_blank" href="https://web.facebook.com/sceneflicks" aria-label="facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a></li><li><a target="_blank" href="#" aria-label="Youtube"><span class="fa fa-youtube" aria-hidden="true"></span></a></li><li class="social-icon-instagram"><a target="_blank" href="https://www.instagram.com/sceneflicksofficial/" aria-label="Instagram"><span class="fa fa-instagram" aria-hidden="true"></span></a></li></ul></div></div></div>
-        </div>
-</div>
+</div> <!-- trip-gallery-wrapper ends -->
+</div> <!-- container ends -->
 
-</footer>        </div>
-</div>
+<!-- 🔍 Search & Filter Bar -->
+<div class="container extra-section">
+  <div class="search-filter">    
+    <select>
+      <option value="">All Types</option>
+      <option value="beach">Beach</option>
+      <option value="safari">Safari</option>
+      <option value="city">City</option>
+    </select>
+    <a href="bookinghotels.html" class="searchnow-btn">🔍 Search</a>
+  </div>
 
-<!-- Off Canvas Menu -->
-    <div class="offcanvas-overlay"></div>
-    <div class="offcanvas-menu">
-        <a href="#" class="close-offcanvas"><span class="fa fa-remove"></span></a>
-        <div class="offcanvas-inner">
-                            <div class="sp-module "><div class="sp-module-content"><ul class="menu">
-<li class="item-294"><a href="index.html?Itemid=" >Home</a></li>
-    <li class="item-297"><a href="aboutus.html" >About Us</a></li>
-    <li class="item-299"><a href="listyourproperty.html" >List Your Property</a></li>
-    <li class="item-313"><a href="reviews.html" >Reviews</a></li>
-    <li class="item-313"><a href="contact-us.html" >Contact Us</a></li>
-	<li class="item-313"><a href="tripplanner.html" >Trip Planner</a></li>
-  <li class="item-313"><a href="login.php" class="btn" style="background:#ff8800; color:#fff; border-radius:6px; padding: 4px 10px; font-size: 14px; line-height: 1;">Login</a>
-  </li>
-            </ul></div></div>
-                    </div>
+
+  <!-- 🔥 Hot Deals -->
+<h3 class="section-title">🔥 Hot Deals This Week</h3>
+<p class="section-sub">Limited time offers on top destinations</p>
+
+<div class="deals-grid">
+  <!-- Maasai Mara -->
+  <a href="bookinghotels.html" class="deal-link">
+    <div class="deal-card">
+      <div class="media-wrapper">
+        <img src="../../images/places/maasai-mara.jpg" alt="Maasai Mara">
+        <video src="../../videos/maasaimaraview.mp4" muted playsinline></video>
+      </div>
+      <div class="deal-info">
+        <p class="deal-title">3 Days in Maasai Mara</p>
+        <p class="deal-price">KES 25,000</p>
+        <p class="deal-countdown">⏳ Deal ends in: <span id="timer1"></span></p>
+      </div>
     </div>
+  </a>
+
+  <!-- Naivasha -->
+  <a href="bookinghotels.html" class="deal-link">
+    <div class="deal-card">
+      <div class="media-wrapper">
+        <img src="../../images/places/naivasha.jpg" alt="Naivasha">
+        <video src="../../videos/naivashaview.mp4" muted playsinline></video>
+      </div>
+      <div class="deal-info">
+        <p class="deal-title">Weekend at Naivasha</p>
+        <p class="deal-price">KES 9,500</p>
+        <p class="deal-countdown">⏳ Deal ends in: <span id="timer2"></span></p>
+      </div>
+    </div>
+  </a>
+
+  <!-- Mombasa -->
+  <a href="bookinghotels.html" class="deal-link">
+    <div class="deal-card">
+      <div class="media-wrapper">
+        <img src="../../images/places/mombasa.jpg" alt="Mombasa">
+        <video src="../../videos/mombasaview.mp4" muted playsinline></video>
+      </div>
+      <div class="deal-info">
+        <p class="deal-title">Coastal Vibes in Mombasa</p>
+        <p class="deal-price">KES 18,000</p>
+        <p class="deal-countdown">⏳ Deal ends in: <span id="timer3"></span></p>
+      </div>
+    </div>
+  </a>
+</div>
 
 
-<div id="floatingbtn" class="tooltip_light"></div>
+<!-- ✅ Hover-to-play script -->
 <script>
-jQuery(document).ready(function(){
-var links = [
-    {
-"bgcolor":"#ff8800",
-"icon":"",
-"color":"#ffffff",
-},
-    {
-"tooltip":"Call now",
-"url":"tel: +254703212820",
-"bgcolor":"#ff8800",
-"color":"#ffffff",
-"icon":""
-},
-    {
-"tooltip":"Whatsapp",
-"url":"whatsapp://send?phone=254703212820",
-"bgcolor":"#25d366",
-"color":"#ffffff",
-"icon":"<img class='child_item_icon_custom' src='/images/img_411918.png' alt=''/>"
-},
-    {
-"tooltip":"Email",
-"url":"mailto:sceneflicks@gmail.com",
-"bgcolor":"#4285f4",
-"color":"#ffffff",
-"icon":""
-},
-    {
-"tooltip":"Facebook",
-"url":"https://web.facebook.com/sceneflicks",
-"bgcolor":"#4267b2",
-"color":"#ffffff",
-"icon":"<img class='child_item_icon_custom' src='/images/105-1051654_facebook-f-icon-logo-outline-transparent-vector-transparente.png' alt=''/>"
-},
-    {
-"tooltip":"Instagram",
-"url":"https://www.instagram.com/sceneflicksofficial/",
-"bgcolor":"#653a6b",
-"color":"#ffffff",
-"icon":"<img class='child_item_icon_custom' src='/images/instagram-png-icon-2.png' alt=''/>"
-},
-];
-var options = {
-rotate: false        };
-jQuery('#floatingbtn').jqueryFab(links, options);
-})
+  document.addEventListener("DOMContentLoaded", () => {
+    const dealCards = document.querySelectorAll('.deal-card');
+
+    // Play on hover (desktop/laptop)
+    dealCards.forEach(card => {
+      const video = card.querySelector('video');
+      if (!video) return;
+
+      card.addEventListener('mouseenter', () => {
+        video.play();
+      });
+
+      card.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    });
+
+    // Autoplay on mobile when video is visible
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+          video.currentTime = 0;
+        }
+      });
+    }, {
+      threshold: 0.5 // Play when at least 50% visible
+    });
+
+    // Observe all videos
+    document.querySelectorAll('.deal-card video').forEach(video => {
+      observer.observe(video);
+    });
+  });
 </script>
 
 
+  
+  <!-- 💬 Testimonials -->
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <h3 class="section-title">💬 What Travelers Say</h3>
 
-<!-- Go to top -->
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="../../images/users/achieng.jpg" alt="Achieng">
+          <div>
+            <h4>Achieng</h4>
+            <p>Samburu Explorer</p>
+          </div>
+        </div>
+        <p class="testimonial-quote">“Unforgettable experience in Samburu! Thanks guys!”</p>
+        <div class="stars">★★★★★</div>
+      </div>
 
-<!-- onWebChat START -->
-<script type='text/javascript'>var onWebChat={ar:[], set: function(a,b){if (typeof onWebChat_==='undefined'){this.ar.push([a,b]);}else{onWebChat_.set(a,b);}},get:function(a){return(onWebChat_.get(a));},w:(function(){ var ga=document.createElement('script'); ga.type = 'text/javascript';ga.async=1;ga.src=('https:'==document.location.protocol?'https:':'http:') + '//www.onwebchat.com/clientchat/b740f37114754f219d43ac529b778e74';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})()}</script>
-<!-- onWebChat END --></body>
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="../../images/users/brian.jpg" alt="Brian">
+          <div>
+            <h4>Brian</h4>
+            <p>Naivasha Trip</p>
+          </div>
+        </div>
+        <p class="testimonial-quote">“Smooth and stress-free. Loved the Naivasha package!”</p>
+        <div class="stars">★★★★★</div>
+      </div>
 
-</html>
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="../../images/users/wanjiku.jpg" alt="Wanjiku">
+          <div>
+            <h4>Wanjiku</h4>
+            <p>Eldoret Adventure</p>
+          </div>
+        </div>
+        <p class="testimonial-quote">“Booked Eldoret trip, everything was on point!”</p>
+        <div class="stars">★★★★☆</div>
+      </div>
+    </div>
+
+    <div class="testimonial-btn-container">
+      <a href="reviews.html" class="testimonial-btn">View More Testimonials</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- 📨 Newsletter -->
+  <div class="newsletter-box">
+    <p>📬 Get exclusive deals straight to your inbox</p>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </div>
+
+  <!-- ❓ FAQ Section -->
+  <h3 class="section-title">❓ Frequently Asked Questions</h3>
+  <div class="faq">
+    <details>
+      <summary>Is transport included in the packages?</summary>
+      <p>Yes, most of our packages include transport. Please check individual listings for details.</p>
+    </details>
+    <details>
+      <summary>Can I cancel or reschedule?</summary>
+      <p>You can cancel up to 48 hours before the trip. Terms apply based on package.</p>
+    </details>
+    <details>
+      <summary>Do you offer group discounts?</summary>
+      <p>Yes! We offer discounts for groups of 4 or more. Contact us for a custom quote.</p>
+    </details>
+  </div>
+
+  <!-- 📞 Call to Action -->
+  <div class="cta-box">
+    <h3>📞 Ready to Start Your Journey?</h3>
+    <p>Let us help you create unforgettable memories. Whether it's a solo escape, romantic retreat, or family vacation — we've got you.</p>
+    <a href="contact-us.html" class="contactnow-btn" style="margin-top: 15px;">Contact Us</a>
+  </div>
+</div>
+
+<!-- 🗺️ Explore on Map -->
+<h3 class="section-title">🗺️ Explore on Map</h3>
+<div id="map" style="height: 300px; border-radius: 10px; margin-bottom: 30px;"></div>
+
+
+<!-- SCRIPTS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([-1.2921, 36.8219], 6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; OpenStreetMap contributors',
+  }).addTo(map);
+  L.marker([-1.2921, 36.8219]).addTo(map).bindPopup('Nairobi').openPopup();
+
+  
+
+</script>
+
+</section>
+
+
+
+
+<!-- ===== FOOTER ===== -->
+
+<!-- Off Canvas Menu -->
+ <section>
+<div class="offcanvas-overlay"></div>
+<div class="offcanvas-menu">
+    <a href="#" class="close-offcanvas"><span class="fa fa-remove"></span></a>
+    <div class="offcanvas-inner">
+                        <div class="sp-module "><div class="sp-module-content"><ul class="menu">
+<li class="item-294"><a href="index.html?Itemid=" >Home</a></li>
+<li class="item-297"><a href="aboutus.html" >About Us</a></li>
+<li class="item-299"><a href="listyourproperty.html" >List Your Property</a></li>
+<li class="item-313"><a href="reviews.html" >Reviews</a></li>
+<li class="item-313"><a href="contact-us.html" >Contact Us</a></li>
+<li class="item-313"><a href="tripplanner.html" >Trip Planner</a></li>
+<li class="item-313"><a href="login.php" class="btn" style="background:#ff8800; color:#fff; border-radius:6px; padding: 4px 10px; font-size: 14px; line-height: 1;">Login</a>
+</li>
+</section>
+
+
+<!-- footer data 2-->
+
+<footer id="sp-footer" style="background-color: #111; color: white; padding: 40px 0; position: relative;">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <!-- Copyright -->
+        <div id="sp-footer1" class="col-lg-12 text-center">
+          <div class="sp-column">
+            <span class="sp-copyright">© 2025 Scene Flicks Agency | +254 703 212 820 | sceneflicks@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Social Trigger & Icons -->
+  <div class="floating-social-wrapper">
+    <button id="socialToggleFloating" aria-label="Show Socials">
+      <span class="hamburger-icon"></span>
+    </button>
+    <ul class="floating-social-icons" id="floatingSocials">
+      <li>
+        <a href="https://api.whatsapp.com/send?phone=254703212820" target="_blank" aria-label="Whatsapp">
+          <img src="../../images/icons/whatsapp.png" alt="Whatsapp" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/sceneflicksofficial/" target="_blank" aria-label="Instagram">
+          <img src="../../images/icons/instagram.png" alt="Instagram" />
+        </a>
+      </li>
+      <li>
+        <a href="tel:+254703212820" aria-label="Call">
+          <img src="../../images/icons/phone.png" alt="Call" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=100093087914716" target="_blank" aria-label="Facebook">
+          <img src="../../images/icons/facebook.png" alt="Facebook" />
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Styles -->
+  <style>
+    .floating-social-wrapper {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+    }
+
+    #socialToggleFloating {
+      background-color: #ff8800;
+      border: none;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: background-color 0.3s ease;
+    }
+
+    #socialToggleFloating:hover {
+      background-color: #ff3300;
+    }
+
+    .hamburger-icon {
+      display: inline-block;
+      width: 22px;
+      height: 2px;
+      background-color: white;
+      position: relative;
+    }
+
+    .hamburger-icon::before,
+    .hamburger-icon::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 2px;
+      background-color: white;
+      left: 0;
+    }
+
+    .hamburger-icon::before {
+      top: -7px;
+    }
+
+    .hamburger-icon::after {
+      top: 7px;
+    }
+
+    .floating-social-icons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(100px);
+      transition: all 0.4s ease;
+    }
+
+    .floating-social-icons.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+    }
+
+    .floating-social-icons li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #fff;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .floating-social-icons li a:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-social-icons li img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+  </style>
+
+  <!-- Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.getElementById("socialToggleFloating");
+      const socials = document.getElementById("floatingSocials");
+
+      toggleBtn.addEventListener("click", function () {
+        socials.classList.toggle("active");
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!toggleBtn.contains(e.target) && !socials.contains(e.target)) {
+          socials.classList.remove("active");
+        }
+      });
+    });
+  </script>
+</footer>

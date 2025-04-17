@@ -43,7 +43,7 @@ h4{font-family: 'Work Sans', sans-serif;font-size: 16px;font-weight: 600;}
 
 .logo-image 
 {
-    height:none;
+    height:50px;
 }
 #sp-footer{ background-color:#000000; }
 	</style>
@@ -116,14 +116,16 @@ template="shaper_wayne_corp";
                     <span></span><span></span><span></span></div></a><ul 
                     
                     class="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block"><li 
-                    class="sp-menu-item"><a   
-                        href="index.html"  >Home</a></li><li 
-                    class="sp-menu-item"><a   
-                        href="aboutus.html"  >About Us</a></li><li 
-                    class="sp-menu-item"><a   
-                        href="tripplanner.html"  >Trip Planner</a></li><li 
-                    class="sp-menu-item"><a   
-                        href="reviews.html"  >Reviews</a>
+                    class="sp-menu-item">   
+                      <a href="index.html"  >Home</a></li><li 
+                    class="sp-menu-item">   
+                      <a href="aboutus.html"  >About Us</a></li><li 
+                    class="sp-menu-item">   
+                      <a href="tripplanner.html"  >Trip Planner</a></li><li 
+                    class="sp-menu-item">   
+                      <a href="gallery.html"  >Gallery</a></li><li
+                    class="sp-menu-item">   
+                      <a href="reviews.html"  >Reviews</a>
 
                         
                     </li></ul></nav></div></div>
@@ -140,7 +142,10 @@ template="shaper_wayne_corp";
                     class="sp-menu-item"><a   
                     href="listyourproperty.html"  >List Your Property</a                    
                     class="sp-menu-item"><a   
-                    href="contact-us.html"  >Contact Us</a>                    
+                    href="contact-us.html"  >Contact Us</a>
+                    
+                    <a href="naivashahotels.html"  >Naivasha Hotels</a> 
+
                     <a href="login.php" class="btn" style="background:#ff8800; color:#fff; border-radius:6px; padding: 4px 10px; font-size: 14px; line-height: 1;">Login</a>
 
                     
@@ -180,79 +185,185 @@ template="shaper_wayne_corp";
     </section>
   </main>
 
- <!-- Off Canvas Menu -->
-    <div class="offcanvas-overlay"></div>
-    <div class="offcanvas-menu">
-        <a href="#" class="close-offcanvas"><span class="fa fa-remove"></span></a>
-        <div class="offcanvas-inner">
-                            <div class="sp-module "><div class="sp-module-content"><ul class="menu">
-<li class="item-294"><a href="index.html?Itemid=" >Home</a></li>
-    <li class="item-297"><a href="aboutus.html" >About Us</a></li>
-    <li class="item-299"><a href="listyourproperty.html" >List Your Property</a></li>
-    <li class="item-313"><a href="reviews.html" >Reviews</a></li>
-    <li class="item-313"><a href="contact-us.html" >Contact Us</a></li>
+ <!-- ===== FOOTER ===== -->
+
+<!-- Off Canvas Menu -->
+<section>
+	<div class="offcanvas-overlay"></div>
+	<div class="offcanvas-menu">
+		<a href="#" class="close-offcanvas"><span class="fa fa-remove"></span></a>
+		<div class="offcanvas-inner">
+							<div class="sp-module "><div class="sp-module-content"><ul class="menu">
+	<li class="item-294"><a href="index.html?Itemid=" >Home</a></li>
+	<li class="item-297"><a href="aboutus.html" >About Us</a></li>
+	<li class="item-299"><a href="listyourproperty.html" >List Your Property</a></li>
+	<li class="item-313"><a href="reviews.html" >Reviews</a></li>
+	<li class="item-313"><a href="contact-us.html" >Contact Us</a></li>
 	<li class="item-313"><a href="tripplanner.html" >Trip Planner</a></li>
-  <li class="item-313"><a href="login.php" class="btn" style="background:#ff8800; color:#fff; border-radius:6px; padding: 4px 10px; font-size: 14px; line-height: 1;">Login</a>
-  </li>
-
- 
- <div id="floatingbtn" class="tooltip_light"></div>
-<script>
- jQuery(document).ready(function(){
-	 var links = [
-					 {
-			 "bgcolor":"#ff8800",
-			 "icon":"",
-			 "color":"#ffffff",
-		 },
-					 {
-			 "tooltip":"Call now",
-			 "url":"tel: +254703212820",
-			 "bgcolor":"#ff8800",
-			 "color":"#ffffff",
-			 "icon":""
-		 },
-					 {
-			 "tooltip":"Whatsapp",
-			 "url":"whatsapp://send?phone=254703212820",
-			 "bgcolor":"#25d366",
-			 "color":"#ffffff",
-			 "icon":"<img class='child_item_icon_custom' src='/images/img_411918.png' alt=''/>"
-		 },
-					 {
-			 "tooltip":"Email",
-			 "url":"mailto:sceneflicks@gmail.com",
-			 "bgcolor":"#4285f4",
-			 "color":"#ffffff",
-			 "icon":""
-		 },
-					 {
-			 "tooltip":"Facebook",
-			 "url":"https://web.facebook.com/sceneflicks",
-			 "bgcolor":"#4267b2",
-			 "color":"#ffffff",
-			 "icon":"<img class='child_item_icon_custom' src='/images/105-1051654_facebook-f-icon-logo-outline-transparent-vector-transparente.png' alt=''/>"
-		 },
-					 {
-			 "tooltip":"Instagram",
-			 "url":"https://www.instagram.com/sceneflicksofficial/",
-			 "bgcolor":"#653a6b",
-			 "color":"#ffffff",
-			 "icon":"<img class='child_item_icon_custom' src='/images/instagram-png-icon-2.png' alt=''/>"
-		 },
-				 ];
-	 var options = {
-		 rotate: false        };
-	 jQuery('#floatingbtn').jqueryFab(links, options);
- })
-</script>
-
-
- 
- <!-- Go to top -->
- 
- <!-- onWebChat START -->
-<script type='text/javascript'>var onWebChat={ar:[], set: function(a,b){if (typeof onWebChat_==='undefined'){this.ar.push([a,b]);}else{onWebChat_.set(a,b);}},get:function(a){return(onWebChat_.get(a));},w:(function(){ var ga=document.createElement('script'); ga.type = 'text/javascript';ga.async=1;ga.src=('https:'==document.location.protocol?'https:':'http:') + '//www.onwebchat.com/clientchat/b740f37114754f219d43ac529b778e74';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})()}</script>
-<!-- onWebChat END --></body>
-
-</html>
+	<li class="item-313"><a href="login.php" class="btn" style="background:#ff8800; color:#fff; border-radius:6px; padding: 4px 10px; font-size: 14px; line-height: 1;">Login</a>
+	</li>
+	</section>
+	
+	
+	<!-- footer data 2-->
+	
+	<footer id="sp-footer" style="background-color: #111; color: white; padding: 40px 0; position: relative;">
+	  <div class="container">
+		<div class="container-inner">
+		  <div class="row">
+			<!-- Copyright -->
+			<div id="sp-footer1" class="col-lg-12 text-center">
+			  <div class="sp-column">
+				<span class="sp-copyright">© 2025 Scene Flicks Agency | +254 703 212 820 | sceneflicks@gmail.com</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	
+	  <!-- Floating Social Trigger & Icons -->
+	  <div class="floating-social-wrapper">
+		<button id="socialToggleFloating" aria-label="Show Socials">
+		  <span class="hamburger-icon"></span>
+		</button>
+		<ul class="floating-social-icons" id="floatingSocials">
+		  <li>
+			<a href="https://api.whatsapp.com/send?phone=254703212820" target="_blank" aria-label="Whatsapp">
+			  <img src="../../images/icons/whatsapp.png" alt="Whatsapp" />
+			</a>
+		  </li>
+		  <li>
+			<a href="https://www.instagram.com/sceneflicksofficial/" target="_blank" aria-label="Instagram">
+			  <img src="../../images/icons/instagram.png" alt="Instagram" />
+			</a>
+		  </li>
+		  <li>
+			<a href="tel:+254703212820" aria-label="Call">
+			  <img src="../../images/icons/phone.png" alt="Call" />
+			</a>
+		  </li>
+		  <li>
+			<a href="https://www.facebook.com/profile.php?id=100093087914716" target="_blank" aria-label="Facebook">
+			  <img src="../../images/icons/facebook.png" alt="Facebook" />
+			</a>
+		  </li>
+		</ul>
+	  </div>
+	
+	  <!-- Styles -->
+	  <style>
+		.floating-social-wrapper {
+		  position: fixed;
+		  bottom: 30px;
+		  right: 30px;
+		  z-index: 999;
+		}
+	
+		#socialToggleFloating {
+		  background-color: #ff8800;
+		  border: none;
+		  width: 60px;
+		  height: 60px;
+		  border-radius: 50%;
+		  cursor: pointer;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+		  transition: background-color 0.3s ease;
+		}
+	
+		#socialToggleFloating:hover {
+		  background-color: #ff3300;
+		}
+	
+		.hamburger-icon {
+		  display: inline-block;
+		  width: 22px;
+		  height: 2px;
+		  background-color: white;
+		  position: relative;
+		}
+	
+		.hamburger-icon::before,
+		.hamburger-icon::after {
+		  content: '';
+		  position: absolute;
+		  width: 22px;
+		  height: 2px;
+		  background-color: white;
+		  left: 0;
+		}
+	
+		.hamburger-icon::before {
+		  top: -7px;
+		}
+	
+		.hamburger-icon::after {
+		  top: 7px;
+		}
+	
+		.floating-social-icons {
+		  list-style: none;
+		  padding: 0;
+		  margin: 0;
+		  position: fixed;
+		  bottom: 100px;
+		  right: 30px;
+		  display: flex;
+		  flex-direction: column;
+		  gap: 10px;
+		  opacity: 0;
+		  pointer-events: none;
+		  transform: translateX(100px);
+		  transition: all 0.4s ease;
+		}
+	
+		.floating-social-icons.active {
+		  opacity: 1;
+		  pointer-events: auto;
+		  transform: translateX(0);
+		}
+	
+		.floating-social-icons li a {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  width: 48px;
+		  height: 48px;
+		  border-radius: 50%;
+		  background-color: #fff;
+		  overflow: hidden;
+		  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+		  transition: transform 0.3s;
+		}
+	
+		.floating-social-icons li a:hover {
+		  transform: scale(1.1);
+		}
+	
+		.floating-social-icons li img {
+		  width: 28px;
+		  height: 28px;
+		  object-fit: contain;
+		}
+	  </style>
+	
+	  <!-- Script -->
+	  <script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const toggleBtn = document.getElementById("socialToggleFloating");
+		  const socials = document.getElementById("floatingSocials");
+	
+		  toggleBtn.addEventListener("click", function () {
+			socials.classList.toggle("active");
+		  });
+	
+		  document.addEventListener("click", function (e) {
+			if (!toggleBtn.contains(e.target) && !socials.contains(e.target)) {
+			  socials.classList.remove("active");
+			}
+		  });
+		});
+	  </script>
+	</footer>
