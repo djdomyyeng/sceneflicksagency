@@ -159,7 +159,7 @@ template="shaper_wayne_corp";
 
 
                         
-                          <!-- Main Body -->
+                          <!-- MAIN BODY -->
 
                         
 <section id="sp-main-body"> 
@@ -170,11 +170,11 @@ template="shaper_wayne_corp";
         font-family: Arial, sans-serif;
       }
 
-  
       .container {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center; /* Center everything inside */
+  text-align: left; 
+  height: 2px;
 }
 
 .book-now-btn {
@@ -185,7 +185,7 @@ template="shaper_wayne_corp";
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 20px;
   border-radius: 12px;
   animation: slideInZoom 3s ease-out forwards, zoomEffect 2s ease-in-out infinite;
   opacity: 0;
@@ -215,7 +215,77 @@ template="shaper_wayne_corp";
   50% {
     transform: scale(1.08);
   }
+}     
+
+  
+      .container0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: right; /* Center everything inside */
 }
+
+.quickaccess-btn {
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 12px 30px;
+  background-color: #ff8800;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 12px;
+  animation: slideInZoom 3s ease-out forwards, zoomEffect 2s ease-in-out infinite;
+  opacity: 0;
+  transform: translateX(-200px) scale(1); /* Initial position */
+  transition: background-color 0.9s ease;
+}
+
+.quickaccess-btn:hover {
+  background-color: #ff3300;
+}
+
+@keyframes slideInZoom {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes zoomEffect {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+
+
+@keyframes slideInZoom {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes zoomEffect {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
 
 
       .container1 {
@@ -740,6 +810,12 @@ template="shaper_wayne_corp";
       <a href="bookinghotels.html" class="book-now-btn">Book Now</a>
 
       </section>
+
+      <section>
+        <div class="container0">
+          <a href="quickaccess.html" class="quickaccess-btn">Quick Access</a>
+    
+          </section>
 
       <section>
     <div class="container1">
