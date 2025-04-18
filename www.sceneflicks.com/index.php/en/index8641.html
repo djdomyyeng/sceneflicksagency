@@ -366,52 +366,52 @@ template="shaper_wayne_corp";
                          <main>
                            <!-- Booking Section -->
                            <section id="booking-section">
-                             <div class="booking-field">
-                               <input type="date" id="checkin-date" placeholder="Check-in Date" />
-                             </div>
-                             <div class="booking-field">
-                               <input type="date" id="checkout-date" placeholder="Check-out Date" />
-                             </div>
-                             <div class="booking-field pax-holder" onclick="togglePaxDropdown()">
-                               <span id="pax-summary">Guests &amp; Rooms</span>
-                               <span style="font-size:0.8rem;">&#9660;</span>
-                               <!-- Dropdown Content -->
-                               <div id="pax-dropdown">
-                                 <div class="pax-option">
-                                   <span>Adults</span>
-                                   <div class="counter">
-                                     <button onclick="decrement('adults')">-</button>
-                                     <input type="text" id="adults" value="1" readonly />
-                                     <button onclick="increment('adults')">+</button>
-                                   </div>
-                                 </div>
-                                 <div class="pax-option">
-                                   <span>Children</span>
-                                   <div class="counter">
-                                     <button onclick="decrement('children')">-</button>
-                                     <input type="text" id="children" value="0" readonly />
-                                     <button onclick="increment('children')">+</button>
-                                   </div>
-                                 </div>
-                                 <div class="pax-option">
-                                   <span>Rooms</span>
-                                   <div class="counter">
-                                     <button onclick="decrement('rooms')">-</button>
-                                     <input type="text" id="rooms" value="1" readonly />
-                                     <button onclick="increment('rooms')">+</button>
-                                   </div>
-                                 </div>
-                                 <div class="pax-option">
-                                   <label>
-                                     <input type="checkbox" id="pets" /> Traveling with pets?
-                                   </label>
-                                 </div>
-                                 <div class="pax-option">
-                                   <button class="done-btn" onclick="closePaxDropdown()">Done</button>
-                                 </div>
-                               </div>
-                             </div>
-                           </section>
+                            <div class="booking-field">
+                              <input type="date" id="checkin-date" placeholder="Check-in Date" />
+                            </div>
+                            <div class="booking-field">
+                              <input type="date" id="checkout-date" placeholder="Check-out Date" />
+                            </div>
+                            <div class="booking-field pax-holder" onclick="togglePaxDropdown()">
+                              <span id="pax-summary">Guests &amp; Rooms</span>
+                              <span style="font-size:0.8rem;">&#9660;</span>
+                              <!-- Dropdown Content -->
+                              <div id="pax-dropdown">
+                                <div class="pax-option">
+                                  <span>Adults</span>
+                                  <div class="counter">
+                                    <button onclick="decrement('adults')">-</button>
+                                    <input type="text" id="adults" value="1" readonly />
+                                    <button onclick="increment('adults')">+</button>
+                                  </div>
+                                </div>
+                                <div class="pax-option">
+                                  <span>Children</span>
+                                  <div class="counter">
+                                    <button onclick="decrement('children')">-</button>
+                                    <input type="text" id="children" value="0" readonly />
+                                    <button onclick="increment('children')">+</button>
+                                  </div>
+                                </div>
+                                <div class="pax-option">
+                                  <span>Rooms</span>
+                                  <div class="counter">
+                                    <button onclick="decrement('rooms')">-</button>
+                                    <input type="text" id="rooms" value="1" readonly />
+                                    <button onclick="increment('rooms')">+</button>
+                                  </div>
+                                </div>
+                                <div class="pax-option">
+                                  <label>
+                                    <input type="checkbox" id="pets" /> Traveling with pets?
+                                  </label>
+                                </div>
+                                <div class="pax-option">
+                                  <button class="done-btn" onclick="closePaxDropdown()">Done</button>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
                        
                            <!-- Top Buttons -->
                            <div class="buttons">
