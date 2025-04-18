@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quick Access | Scene Flicks Agency</title>
-  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
@@ -193,7 +193,21 @@
 </head>
 <body>
   <div class="sidebar" id="sidebar">
-    <h2><img src="../../images/sceneflicks-logo-small.png" alt="Logo" style="height: 30px;"> Menu</h2>
+    <h2>
+      <img src="../../images/sceneflicks-logo-small.png" alt="Logo" style="height: 30px; cursor: pointer;" onclick="toggleSidebar()"> 
+      Menu
+    </h2>
+
+    <!-- Logo img Java -->
+
+    <script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('open');
+      }
+    </script>
+    
+    
+
     <h3>Reservations</h3>
     <a href="#"><i class="fas fa-calendar-plus"></i> Add Reservation</a>
     <a href="#"><i class="fas fa-book"></i> Bookings</a>
@@ -225,8 +239,11 @@
   <header>
     <div class="header-left">
       <i class="fas fa-bars menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')"></i>
-      <img src="../../images/sceneflicks-logo-small.png" alt="Scene Flicks Logo" />
+      <a href="index.html">
+        <img src="../../images/sceneflicks-logo-small.png" alt="Scene Flicks Logo" />
+      </a>
     </div>
+    
     <div class="header-right">
       <div class="icon-wrapper"><i class="fas fa-search"></i><span>Search Property</span></div>
       <div class="dropdown icon-wrapper">
